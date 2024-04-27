@@ -9,6 +9,8 @@ Launch a CodiMD service instance that satisfies your requirement in seconds!
 
 * [Docker Deployment - HackMD](https://hackmd.io/s/codimd-docker-deployment)  
   The upstream project's relevant documentation.
+* [CodiMD Configuration - HackMD](https://hackmd.io/s/codimd-configuration)  
+  The configuration documentation of the CodiMD software.
 
 ## Licensing
 
