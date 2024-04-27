@@ -88,3 +88,10 @@
 
 # Don't track continuous integration virtual environments
 /continuous-integration/venv/
+
+# Avoid checking in the environment file, which may contain sensitive
+# information
+/.env
+
+# Do track sample environment file
+!/.env.sample
