@@ -11,6 +11,8 @@ Launch a [CodiMD](https://github.com/hackmdio/codimd) service instance that sati
   The upstream project's relevant documentation.
 * [CodiMD Configuration - HackMD](https://hackmd.io/s/codimd-configuration)  
   The configuration documentation of the CodiMD software.
+* [environment variables - Docker-compose env file not working - Stack Overflow](https://stackoverflow.com/questions/48495663/docker-compose-env-file-not-working)  
+  Explains why the .env file's environment variable definition does not apply to individual containers automatically.
 
 ## Licensing
 

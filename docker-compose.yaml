@@ -6,6 +6,8 @@
 #   https://hackmd.io/s/codimd-docker-deployment#Using-docker-compose-to-setup-CodiMD
 # * CodiMD Configuration - HackMD
 #   https://hackmd.io/s/codimd-configuration
+# * Environment variables precedence in Docker Compose | Docker Docs
+#   https://docs.docker.com/compose/environment-variables/envvars-precedence/
 # * Compose Specification | Compose file reference | Reference | Docker Docs
 #   https://docs.docker.com/compose/compose-file/
 #
@@ -21,6 +23,7 @@ services:
     image: postgres:11.6-alpine
     environment:
       - POSTGRES_USER=codimd
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=codimd
     volumes:
       - "database-data:/var/lib/postgresql/data"
@@ -30,7 +33,9 @@ services:
     hostname: codimd
     image: nabo.codimd.dev/hackmdio/hackmd:2.5.3
     environment:
+      - CMD_DB_URL=postgres://codimd:${POSTGRES_PASSWORD}@database/codimd
       - CMD_USECDN=false
+    env_file: .env
     depends_on:
       - database
     ports:
