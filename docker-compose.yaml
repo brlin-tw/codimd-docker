@@ -5,7 +5,7 @@
 # * Using docker-compose to setup CodiMD - Docker Deployment - HackMD
 #   https://hackmd.io/s/codimd-docker-deployment#Using-docker-compose-to-setup-CodiMD
 # * CodiMD Configuration - HackMD
-#   https://hackmd.io/s/codimd-configuration
+#   https://hackmd.io/c/codimd-documentation/%2Fs%2Fcodimd-configuration
 # * Environment variables precedence in Docker Compose | Docker Docs
 #   https://docs.docker.com/compose/environment-variables/envvars-precedence/
 # * Compose Specification | Compose file reference | Reference | Docker Docs
