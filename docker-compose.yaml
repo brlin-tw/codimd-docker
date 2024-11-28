@@ -30,7 +30,7 @@ services:
   codimd:
     container_name: codimd
     hostname: codimd
-    image: nabo.codimd.dev/hackmdio/hackmd:2.5.3
+    image: nabo.codimd.dev/hackmdio/hackmd:2.5.4
     environment:
       - CMD_DB_URL=postgres://codimd:${POSTGRES_PASSWORD}@database/codimd
       - CMD_USECDN=false
