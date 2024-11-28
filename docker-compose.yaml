@@ -16,17 +16,6 @@
 name: codimd
 
 services:
-  database:
-    container_name: codimd-database
-    hostname: codimd-database
-    image: postgres:11.6-alpine
-    environment:
-      - POSTGRES_USER=codimd
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=codimd
-    volumes:
-      - "database-data:/var/lib/postgresql/data"
-    restart: always
   codimd:
     container_name: codimd
     hostname: codimd
@@ -40,6 +29,18 @@ services:
       - "127.0.0.1:3000:3000"
     volumes:
       - upload-data:/home/hackmd/app/public/uploads
+    restart: always
+
+  database:
+    container_name: codimd-database
+    hostname: codimd-database
+    image: postgres:11.6-alpine
+    environment:
+      - POSTGRES_USER=codimd
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=codimd
+    volumes:
+      - "database-data:/var/lib/postgresql/data"
     restart: always
 volumes:
   database-data: {}
