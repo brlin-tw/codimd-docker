@@ -42,6 +42,15 @@ services:
     volumes:
       - "database-data:/var/lib/postgresql/data"
     restart: always
+
+  plantuml:
+    container_name: codimd-plantuml
+    hostname: codimd-plantuml
+    image: plantuml/plantuml-server:jetty
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+
 volumes:
   database-data: {}
   upload-data: {}
